@@ -15,13 +15,11 @@ export class FlickrComponent implements OnInit {
   photos: Object;
 
   constructor(private _formBuilder: FormBuilder, private _http: HttpClient) { }
- 
   ngOnInit() {
-
     this.searchControl.valueChanges
       .debounceTime(1000)
       .distinctUntilChanged()
-      .switchMap((query) => this._http.get(query))
+      .switchMap((query) => query && query.replace(/\s/g, '').length ? this._http.get(query) : this._http.get('dog'))
       .subscribe(value => {
         this.photos = value;
       });

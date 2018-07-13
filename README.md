@@ -19,4 +19,4 @@ Open the Front End from a browser with URL:
 http://localhost:3000  
 
 
-
+If only spaces enterd in the search box, it will display phots of dog.
