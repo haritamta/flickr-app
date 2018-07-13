@@ -19,7 +19,7 @@ export class FlickrComponent implements OnInit {
     this.searchControl.valueChanges
       .debounceTime(1000)
       .distinctUntilChanged()
-      .switchMap((query) => query && query.replace(/\s/g, '').length ? this._http.get(query) : this._http.get('dog'))
+      .switchMap((query) => query && query.replace(/\s/g, '').length ? this._http.get(query) : [])
       .subscribe(value => {
         this.photos = value;
       });

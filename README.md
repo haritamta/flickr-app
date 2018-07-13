@@ -21,6 +21,5 @@ http://localhost:3000
 To run from heroku:
 https://my-flickr-app.herokuapp.com/
 
-If only spaces enterd in the search box, it will display phots of dog.
 
 
