@@ -1,0 +1,25 @@
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Flickr photo demo</a>
+    </div>
+  </div>
+</nav>
+<div class="container">
+  <div class="row">
+    <label for="searchBox">Search Box</label> 
+    <input type="search" id="searchBox" [formControl]="searchControl">
+  </div>
+  <div class="row">
+    <div *ngFor="let photo of photos">
+      <div class="col s4">
+        <div class="card">
+          <div class="card-image">
+            <img src={{photo.url}}>
+            <span class="card-title">{{photo.title}}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
