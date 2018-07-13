@@ -35,7 +35,6 @@ yarn-error.log
 testem.log
 /typings
 package-lock.json
-/*.env
 
 # e2e
 /e2e/*.js
